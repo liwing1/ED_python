@@ -1,16 +1,9 @@
-n = int(input())
-tupla = ()
-saida = ""
-
-for i in range(n):
-    problema, solucao, dificuldade = input().split()
-    dificuldade = int(dificuldade)
-    tupla = tupla + (solucao, dificuldade)
+def factorial(n):
+    if n == 0:
+        return 1
+    else:
+        return n * factorial(n - 1)
 
 
-for j in range(10, -1, -1):
-    for k in range(len(tupla)):
-        if tupla[k] == j:
-            saida += tupla[k-1]
-    print(j)
-print(saida)
+num = int(input())
+print(factorial(num))
